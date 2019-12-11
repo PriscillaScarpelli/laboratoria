@@ -21,7 +21,7 @@ class TelaInicial extends Component {
   abrirModal = () => {
     const tituloModal = 'Ainda não possui acesso?';
     const conteudoModal =
-      'Caso ainda não tenha sido cadastrado, dirija-se até o administrativo para que seu acesso seja liberado';
+      'Caso ainda não tenha sido cadastrado, mande um e-mail para priscillamscarpelli@gmail.com para que seu acesso seja liberado';
     const acoesModal = [
       {
         onClick: this.fecharModal,
@@ -61,7 +61,7 @@ class TelaInicial extends Component {
           >
             <img src='images/logo.png' alt='' className={classes.logo} />
             <Typography variant='body1' className={classes.textoPrincipal}>
-              Bem-vindo ao Sistema da Riva Investimentos!
+              Bem-vindo ao mural da Laboratoria!
             </Typography>
             <Button onClick={() => Auth.login()} className={classes.botao}>
               Entrar

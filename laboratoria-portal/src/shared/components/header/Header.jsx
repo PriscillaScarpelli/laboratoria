@@ -60,77 +60,19 @@ class Header extends Component {
       <Grid container spacing={0} direction='column'>
         <Grid container spacing={0} direction='column' className={classes.cabecalhoMenuLateral}>
           <Grid item xs={12}>
-            <img className={classes.logo} alt='' src='/images/logo-branca.png' />
+            <img className={classes.logo} alt='' src='/images/logo_simplificada.png' />
           </Grid>
         </Grid>
         <Grid container spacing={0} direction='column' className={classes.listaMenuLateral}>
           <List className={classes.lista}>
             <ListItem
-              className={classes.itemListaPrimario}
-              classes={{ root: classes.rootItemLista }}
-            >
-              <ListItemText
-                primary='Carga'
-                className={classes.textoItemLista}
-                classes={{ root: classes.padding0, primary: classes.textoItemLista }}
-              />
-            </ListItem>
-            <ListItem
               button
-              key='Carga Equipe'
-              onClick={() => this.onClickItemMenu('/cargaEquipe')}
+              key='Sair'
+              onClick={() => this.onClickItemMenu('/')}
               className={classes.itemLista}
             >
               <ListItemText
-                primary='Carga Equipe'
-                className={classes.textoItemLista}
-                classes={{ root: classes.padding0, primary: classes.textoItemLista }}
-              />
-            </ListItem>
-            <ListItem
-              button
-              key='Carga Cliente'
-              onClick={() => this.onClickItemMenu('/cargaCliente')}
-              className={classes.itemLista}
-            >
-              <ListItemText
-                primary='Carga Cliente'
-                className={classes.textoItemLista}
-                classes={{ root: classes.padding0, primary: classes.textoItemLista }}
-              />
-            </ListItem>
-            <ListItem
-              button
-              key='Carga Atividade'
-              onClick={() => this.onClickItemMenu('/cargaAtividade')}
-              className={classes.itemLista}
-            >
-              <ListItemText
-                primary='Carga Atividade'
-                className={classes.textoItemLista}
-                classes={{ root: classes.padding0, primary: classes.textoItemLista }}
-              />
-            </ListItem>
-            <ListItem
-              button
-              key='Carga Captação'
-              onClick={() => this.onClickItemMenu('/cargaCaptacao')}
-              className={classes.itemLista}
-            >
-              <ListItemText
-                primary='Carga Captação'
-                className={classes.textoItemLista}
-                classes={{ root: classes.padding0, primary: classes.textoItemLista }}
-              />
-            </ListItem>
-            <ListItem
-              button
-              key='Carga Receita'
-              onClick={() => this.onClickItemMenu('/cargaReceita')}
-              className={classes.itemLista}
-            >
-              <ListItemText
-                primary='Carga Receita'
+                primary='Sair'
                 className={classes.textoItemLista}
                 classes={{ root: classes.padding0, primary: classes.textoItemLista }}
               />
@@ -170,9 +112,9 @@ class Header extends Component {
             )}
           </Grid>
 
-          <Grid item xs={5}>
+          <Grid item xs={4}>
             {!texto && imagemLogo && (
-              <img src='/images/logo-branca.png' className={classes.imagemLogo} alt='logo-riva' />
+              <img src='/images/logo-preto.png' className={classes.imagemLogo} alt='logo' />
             )}
             {!imagemLogo && texto && <Typography className={classes.texto}>{texto}</Typography>}
           </Grid>
@@ -199,7 +141,7 @@ const styles = theme => ({
   },
   headerContainer: {
     height: 80,
-    backgroundColor: '#11263D'
+    backgroundColor: '#ead008'
   },
   texto: {
     color: '#FFFFFF',
@@ -218,12 +160,12 @@ const styles = theme => ({
     fontSize: '29px'
   },
   cabecalhoMenuLateral: {
-    backgroundColor: '#11263D',
+    backgroundColor: '#ffe521',
     padding: '35px 22px 35px 31px',
-    width: '315px'
+    width: '260px'
   },
   logo: {
-    width: '250px',
+    width: '150px',
     marginBottom: '5px'
   },
   boasVindas: {
@@ -239,7 +181,7 @@ const styles = theme => ({
     padding: 0
   },
   iconeItemLista: {
-    color: '#11263D',
+    color: '#ead008',
     marginRight: '10px'
   },
   tamanhoIconeMaterial: {
@@ -268,7 +210,7 @@ const styles = theme => ({
   },
   imagemLogo: {
     height: '70px',
-    width: '400px'
+    width: '250px'
   }
 });
 

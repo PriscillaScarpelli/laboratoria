@@ -8,7 +8,7 @@ export class CallbackContainer extends Component {
   async componentDidMount() {
     Auth.trataAutenticacao(async (autenticado, mensagem) => {
       if (autenticado) {
-        history.push('/cargaEquipe');
+        history.push('/feed');
       } else {
         history.replace('/');
       }

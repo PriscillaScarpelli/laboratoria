@@ -5,6 +5,7 @@ import store from './store';
 import './App.css';
 import TelaInicial from './features/geral/views/TelaInicial';
 import BackdropLoadingContainer from './features/loading/views/BackdropLoadingContainer';
+import FeedContainer from './features/feed/views/FeedContainer';
 import CallbackContainer from './features/auth/views/callbackContainer';
 import { withLogin } from './features/auth';
 import './shared/util/axiosBase';
@@ -19,7 +20,8 @@ class App extends Component {
           <Switch>
             <Route path='/' exact={true} component={TelaInicial} />
             <Route exact path='/callback' component={CallbackContainer} />
-            {/* <Route path='/cargaEquipe' exact={true} component={withLogin(CargaEquipeContainer)} /> */}
+            <Route exact path='//callback' component={CallbackContainer} />
+            <Route path='/feed' exact={true} component={withLogin(FeedContainer)} />
           </Switch>
         </Router>
       </Provider>
